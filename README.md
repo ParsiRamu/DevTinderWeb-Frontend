@@ -10,3 +10,5 @@
 - Create the BrowserRouter > Routes > Parent Route(Body) > login ,profile route(child Routes).
 - Create the Outlet
 - Create the seperate Footer.js component and rendered in the Body.jsx Component.
+
+- Created the sample Routing Pages
