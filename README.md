@@ -12,3 +12,5 @@
 - Create the seperate Footer.js component and rendered in the Body.jsx Component.
 
 - Created the sample Routing Pages
+
+- Modify the Footer
