@@ -20,7 +20,7 @@ const Footer = () => {
     <a className="link link-hover">Press kit</a>
   </nav>
   <nav>
-    <h6 className="footer-title">Legal</h6>
+    <h6 className="footer-title">LEGAL</h6>
     <a className="link link-hover">Terms of use</a>
     <a className="link link-hover">Privacy policy</a>
     <a className="link link-hover">Cookie policy</a>
@@ -34,7 +34,7 @@ const Footer = () => {
           type="text"
           placeholder="username@site.com"
           className="input join-item" />
-        <button className="btn btn-primary join-item">Subscribe</button>
+        <button className="btn btn-primary join-item">Subscribe TO Touch</button>
       </div>
     </fieldset>
   </form>
