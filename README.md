@@ -14,3 +14,5 @@
 - Created the sample Routing Pages
 
 - Modify the Footer
+
+- Created The Basic Signup Component
