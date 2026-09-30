@@ -1,23 +1,36 @@
 
 import React, { useState } from 'react'
+import { useDispatch } from "react-redux";
+import { addUser } from "../utils/userSlice";
+
 import axios from "axios" 
+import { useNavigate } from 'react-router-dom';
+import { BASE_URL } from '../utils/constants';
 
 
 const Login = () => {
   const [emailId,setEmailId] = useState("elon@gmail.com")
   const [passWord,setPassword] = useState("Elon@123")
+  const dispatch = useDispatch()
+  const navigate = useNavigate()
   const handleLogin  = async ()=>{
-    try{const res = await axios.post("http://localhost:7777/login",{
+    try{const res = await axios.post(BASE_URL+"/login",{
       emailId,
       passWord,
 
-    })}
+    },{withCredentials:true})
+
+    // console.log(res.data)
+    dispatch(addUser(res.data));
+    return navigate("/feed")
+  
+  }
     catch(err){
       console.log(err.message)
     }
   }
   return (
-    <div className='flex justify-center my-10'>
+    <div className='flex justify-center my-10'> 
      <div className="card card-border bg-base-300 w-96 my-20">
   <div className="card-body">
     <h2 className="card-title justify-center font-bold my-4 text-2xl">Login</h2>

@@ -16,3 +16,14 @@
 - Modify the Footer
 
 - Created The Basic Signup Component
+
+- Create the login Page
+- Install the Axios
+- Cors -install The Cors in Backend add Middleware with the configuration -origin,Crediantials:true
+- Whenever you are Making API Calls so pass Axios =>{withCrendiatials:true}
+- install react-redux + @reduxjs/toolkit
+- Configure store =>Provider => Createslice =>add reducer to the Store 
+- Add the redux Dev tools Chrome Extension 
+- Login and check if the data was coming or not 
+- Navbar should update as Corresponds to the LoggedIn User
+- Refactor the code by adding the Constants
