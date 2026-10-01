@@ -27,3 +27,6 @@
 - Login and check if the data was coming or not 
 - Navbar should update as Corresponds to the LoggedIn User
 - Refactor the code by adding the Constants
+
+- Modify the Feed Page
+
