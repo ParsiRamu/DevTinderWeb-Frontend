@@ -6,15 +6,15 @@ const UserCardd = ({user}) => {
   return (
    
     
-    <div className="card bg-base-100 w-96 shadow-sm">
+    <div className="card bg-base-300 w-96 shadow-sm h-2/4 mt-30">
   <figure>
     <img
       src={photoUrl}
       alt="Shoes" />
   </figure>
   <div className="card-body">
-    <h2 className="card-title text-black font-bold animate-bounce">{firstName}</h2>
-    {age && gender&& <p>{age + " "+ gender}</p>}
+    <h2 className="card-title text-black font-bold animate-bounce">{firstName+" "+lastName}</h2>
+    {age && gender&& <p>{age + " , "+ gender}</p>}
     <p className='font-mono'>{about}</p>
     <div className="card-actions justify-center my-10 ">
      <button className="btn btn-active btn-primary">Ignore</button>
