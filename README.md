@@ -31,3 +31,8 @@
 - Modify the Feed Page
 
 - Revisit the code Once
+
+- You should not beAcess the other Routes Without the Login 
+- If token is not present Redirect User to the Login Page
+- LOGOUT 
+- PROFILE 
