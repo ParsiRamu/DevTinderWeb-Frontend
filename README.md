@@ -34,5 +34,5 @@
 
 - You should not beAcess the other Routes Without the Login 
 - If token is not present Redirect User to the Login Page
-- LOGOUT 
+- LOGOUT Feature
 - PROFILE 
