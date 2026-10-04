@@ -36,3 +36,8 @@
 - If token is not present Redirect User to the Login Page
 - LOGOUT Feature
 - PROFILE 
+
+- Create the Edit Profile Feature
+- Show toast Message when user Update the profile
+- New Page - see all my Connections
+- New Page - see all my Requests
