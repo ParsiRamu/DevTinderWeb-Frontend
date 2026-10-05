@@ -9,8 +9,11 @@ import { BASE_URL } from '../utils/constants';
 
 
 const Login = () => {
-  const [emailId,setEmailId] = useState("elon@gmail.com")
-  const [passWord,setPassword] = useState("Elon@123")
+  const [emailId,setEmailId] = useState("")
+  const [firstName,setFirstName] = useState("")
+  const [lastName,setlastName] = useState("")
+  const [isLoginform ,setisLoginform]  = useState(false)
+  const [passWord,setPassword] = useState("")
   const [error, setError] = useState("")
   const dispatch = useDispatch()
   const navigate = useNavigate()
@@ -28,15 +31,43 @@ const Login = () => {
   }
     catch(err){
       setError(err?.response?.data || "something went wrong!") 
-      console.error(err?.response?.data)
+      
+    }
+  }
+  const handleSignup = async()=>{
+    try{
+      const res = await axios.post(BASE_URL+"/signup",{firstName,lastName,emailId,passWord},{withCredentials:true})
+      console.log(res)
+       dispatch(addUser(res?.data?.data));
+      return navigate("/profile")
+  
+    }
+    catch(err){
+       setError(err?.response?.data || "something went wrong!")
+
     }
   }
   return (
     <div className='flex justify-center my-10'> 
      <div className="card card-border bg-base-300 w-96 my-20">
   <div className="card-body">
-    <h2 className="card-title justify-center font-bold my-4 text-2xl">Login</h2>
+    <h2 className="card-title justify-center font-bold my-4 text-2xl">{isLoginform?"Login":"Signup"}</h2>
     <fieldset className="fieldset">
+     {!isLoginform && 
+     <><legend className="fieldset-legend text-2xl ">First Name:</legend>
+  <input type="text"
+  value={firstName}
+   className="input" placeholder="Enter First Name " 
+   onChange={(e)=>{
+    setFirstName(e.target.value)
+ }}/>
+  <legend className="fieldset-legend text-2xl ">Last Name:</legend>
+  <input type="text"
+  value={lastName}
+  className="input" placeholder="Enter Last Name " 
+  onChange={(e)=>{
+    setlastName(e.target.value)
+  }}/> </>}
   <legend className="fieldset-legend text-2xl ">Email ID</legend>
   <input type="text"
   value={emailId}
@@ -45,7 +76,7 @@ const Login = () => {
     setEmailId(e.target.value)
  }}/>
   <legend className="fieldset-legend text-2xl ">Password</legend>
-  <input type="text"
+  <input type="password"
   value={passWord}
   className="input" placeholder="Enter your Password" 
   onChange={(e)=>{
@@ -54,7 +85,8 @@ const Login = () => {
   <p className='text-red-600 font-mono'>{error}</p>
   </fieldset>
     <div className="card-actions justify-end">
-      <button className="btn btn-primary justify-center mx-35" onClick={handleLogin}>Login</button>
+      <button className="btn btn-primary justify-center mx-35" onClick={isLoginform? handleLogin:handleSignup}>{isLoginform?"Login":"Signup"}</button>
+      <p className='flex justify-between cursor-pointer' onClick={()=>setisLoginform((value)=>!value)}>{isLoginform?"New User Signup Here":"Existing User Login Here"}</p>
     </div>
   </div>
 </div>

@@ -26,7 +26,7 @@ const handleSendRequest = async(status,userId)=>{
   return (
    
     
-    <div className="card bg-base-300 w-96 shadow-sm h-2/4 mt-30">
+    <div className="card bg-base-300 w-90 shadow-sm h-2/4 mt-30">
   <figure>
     <img
       src={photoUrl}
