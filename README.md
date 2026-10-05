@@ -41,3 +41,6 @@
 - Show toast Message when user Update the profile
 - New Page - see all my Connections
 - New Page - see all my Requests
+
+- send -interested/ignored Request API with user card removed After the action
+

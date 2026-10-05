@@ -24,7 +24,6 @@ const EditProfile = ({user}) => {
         try{
             setError(" ")
             const res = await axios.patch(BASE_URL+"/profile/edit",{firstName,lastName,age,gender,about,photoUrl},{withCredentials:true})
-            console.log( "RES:",res)
             dispatch(addUser(res?.data?.data))
             setshowToast(true)
             setTimeout(()=>{

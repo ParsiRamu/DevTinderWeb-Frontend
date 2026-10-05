@@ -11,14 +11,11 @@ import UserCardd from './UserCardd';
 
 const Feed = () => {
   const feed = useSelector((store)=>store.feed)
-  console.log(feed)
-  console.log(feed[0])
   
   const dispatch = useDispatch();
   const getfeed = async()=>{
    try{
      const res = await axios.get(BASE_URL+"/feed" ,{withCredentials:true})
-    //  console.log(res?.data)
      dispatch(addFeed(res?.data))
    }
    catch(err){
@@ -30,6 +27,9 @@ const Feed = () => {
   useEffect(()=>{
     getfeed()
   },[])
+   if(!feed) return ;
+
+    if(feed.length ==0) return <div className='flex justify-center my-10 font-bold text-2xl'>No users Found  </div>
   return (
     feed?.length > 0 &&
     <div className='flex justify-center my-10'>
