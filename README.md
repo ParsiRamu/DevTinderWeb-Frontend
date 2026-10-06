@@ -46,3 +46,13 @@
 - Signup page 
 - End to End Testing
 
+
+
+
+# DEPLOYEMENT
+- signup on AWS 
+- Launch The instance
+- devTinder-secret.pem 
+- connect with the ssh -i "devTinder-secret.pem" ubuntu@ec2-52-66-247-(dash).ap-south-1.compute.amazonaws.com Command
+- install the exact version of my node(v24.13.1) in the virtual ubuntu server
+- 
