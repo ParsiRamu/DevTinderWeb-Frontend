@@ -69,7 +69,7 @@
 - Backend
   - Add the MongoDB connectionurl in the virtual server by creating the .env file inside it.
   - Add the EC2 public IP in the mongoDB network Acess
-  - npm install pm2 -g -(for runnig the backend application 24/7)
+  - npm install pm2 -g -(for running the backend application 24/7)
   - pm2 start npm -- start
   - pm2 start npm --name "devTinderbackend" -- start -(for giving the custome name to the pm2 log)
   - pm2 logs
@@ -93,5 +93,13 @@
   - sudo systemctl reload nginx  -(Reload/Restart after the changes)
 
   -Modify the BASEURL in the frontend project to  "/api"
+
+# Adding the custom Domain Name
+  - Purchased Domain Name from the goDaddy
+  - Signup the CloudFlare and add the domain name into it then it gives the nameservers
+  - Change the Nameservers on godaddy and point it to the CloudFlare
+  - Wait for sometime till your NameServers are Updated
+  - After the updated Create the DNS "A" record and map in that with the domain name and the IP Address
+  - Enable the SSL for the Website 
 
     
