@@ -102,4 +102,13 @@
   - After the updated Create the DNS "A" record and map in that with the domain name and the IP Address
   - Enable the SSL for the Website 
 
+# Keep the crediantials(secret Keys) Safe -Backend
+ - install the dotenv package from the npm
+ - Need to configure at the root Level
+ - Install → npm install dotenv — installs the dotenv package in your Node.js project.
+ - Create .env → Store variables like MONGODB_URL=your_connection_string and API_KEY=your_key.
+ - Configure → Add require("dotenv").config() at the beginning of your application.
+ - Loads into process.env → Dotenv reads .env and makes the variables available as process.env.MONGODB_URL, process.env.API_KEY, etc.
+ - Use in your code → mongoose.connect(process.env.MONGODB_URL) — your actual secrets stay in .env instead of being hardcoded in your         JavaScript.
+
     

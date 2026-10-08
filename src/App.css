@@ -1,1 +1,17 @@
 
+.login-page {
+  background-color: #020817;
+  background-image:
+    linear-gradient(90deg, rgb(2 8 23 / 12%) 0%, rgb(2 8 23 / 20%) 48%, rgb(2 8 23 / 54%) 100%),
+    url("/login-background.png");
+  background-position: center;
+  background-size: cover;
+}
+
+@media (max-width: 639px) {
+  .login-page {
+    background-image:
+      linear-gradient(rgb(2 8 23 / 42%), rgb(2 8 23 / 64%)),
+      url("/login-background.png");
+  }
+}

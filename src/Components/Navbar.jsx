@@ -1,6 +1,5 @@
 
 import axios from 'axios';
-import React from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import { BASE_URL } from '../utils/constants';
@@ -32,7 +31,10 @@ const Navbar = () => {
     <div>
          <div className="navbar bg-base-300 shadow-sm ">
   <div className="flex-1">
-    <Link to="/feed"  className="btn btn-ghost text-xl">🧑‍💻DevSphere</Link>
+    <Link to="/feed" className="btn btn-ghost gap-2 text-xl">
+      <img src="/devsphere-logo.png" alt="" className="h-10 w-10 rounded-full object-cover" />
+      <span>DevSphere</span>
+    </Link>
   </div>
   <div className="flex gap-2 ">
     
@@ -68,4 +70,3 @@ const Navbar = () => {
 }
 
 export default Navbar;
-
