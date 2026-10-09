@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react'
+import { useState } from 'react'
 import UserCardd from './UserCardd'
 import { BASE_URL } from '../utils/constants'
 import { useDispatch } from 'react-redux'
@@ -41,63 +41,65 @@ const EditProfile = ({user}) => {
     }
   return (
     <>
-    <div className='flex justify-center items-stretch gap-10 my-10'>
-    <div className='flex justify-center my-10'>
-        <div className='card-border bg-base-300 w-140  my-2 '>
-            <p className='text-center mt-10 text-3xl font-medium animate-pulse'>Edit Profile</p>
-        <fieldset className="fieldset mx-20 my-5">
+    <div className='mx-auto flex max-w-6xl flex-col items-center justify-center gap-8 lg:flex-row lg:items-stretch lg:gap-10'>
+    <div className='w-full max-w-xl'>
+        <div className='network-card card w-full rounded-3xl p-5 sm:p-8'>
+            <p className='text-center text-3xl font-semibold'>Edit Profile</p>
+        <fieldset className="fieldset my-4 w-full">
   <legend className="fieldset-legend text-2xl">First Name:</legend>
   <input type="text" 
-  value={firstName} className="input " placeholder="Type here" 
+  value={firstName} className="input w-full" placeholder="Type here" 
   onChange={(e)=>{
     setfirstName(e.target.value)
   }}/>
        </fieldset>
-       <fieldset className="fieldset mx-20 my-5">
+       <fieldset className="fieldset my-4 w-full">
   <legend className="fieldset-legend text-2xl">Last Name:</legend>
   <input type="text" 
-  value={lastName} className="input " placeholder="Type here" 
+  value={lastName} className="input w-full" placeholder="Type here" 
   onChange={(e)=>{
     setlasttName(e.target.value)
   }} />
        </fieldset>
-       <fieldset className="fieldset mx-20 my-5">
+       <fieldset className="fieldset my-4 w-full">
   <legend className="fieldset-legend text-2xl">Age:</legend>
   <input type="text" 
-  value={age} className="input " placeholder="Type here" 
+  value={age} className="input w-full" placeholder="Type here" 
   onChange={(e)=>{
     setAge(e.target.value)
   }}/>
        </fieldset>
-       <fieldset className="fieldset mx-20 my-5">
+       <fieldset className="fieldset my-4 w-full">
   <legend className="fieldset-legend text-2xl">Gender:</legend>
   <input type="text" 
-  value={gender} className="input " placeholder="Type here" 
+  value={gender} className="input w-full" placeholder="Type here" 
    onChange={(e)=>{
     setGender(e.target.value)
   }}/>
        </fieldset>
-  <fieldset className="fieldset mx-20 my-5">
+  <fieldset className="fieldset my-4 w-full">
   <legend className="fieldset-legend text-2xl">About</legend>
   <input type="text" 
-  value={about} className="input " placeholder="Type here"
+  value={about} className="input w-full" placeholder="Type here"
    onChange={(e)=>{
     setAbout(e.target.value)
   }} />
        </fieldset>
-        <fieldset className="fieldset mx-20 my-5">
+        <fieldset className="fieldset my-4 w-full">
   <legend className="fieldset-legend text-2xl">photoUrl:</legend>
   <input type="text" 
-  value={photoUrl} className="input " placeholder="Type here" 
+  value={photoUrl} className="input w-full" placeholder="Type here" 
    onChange={(e)=>{
     setPhotoUrl(e.target.value)
   }}/>
        </fieldset>
-       <p className='font-bold  ml-4 text-red-700'>{error}</p>
- <button className="btn btn-info mx-45 mt-5 mb-5 text-2xl" onClick={saveProfile}>Save Info</button>
+       <p className='font-bold text-red-700'>{error}</p>
+ <button className="btn btn-info mt-5 w-full text-lg" onClick={saveProfile}>Save Info</button>
     </div>
     </div>
-    <UserCardd user = {{firstName,lastName,age,gender,about ,photoUrl}}/>
+    <div className="flex w-full justify-center lg:w-auto">
+      <UserCardd user = {{firstName,lastName,age,gender,about ,photoUrl}}/>
+    </div>
     </div>
     {showToast &&
     <div className="toast toast-top toast-center">

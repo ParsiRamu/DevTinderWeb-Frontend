@@ -1,5 +1,4 @@
 
-import React, { Children } from 'react'
 import EditProfile from './EditProfile'
 import { useSelector } from 'react-redux'
 
@@ -8,9 +7,9 @@ const Profile = () => {
   
   return (
     user &&
-    <div>
+    <main className="network-page px-4 py-8 sm:px-6 sm:py-10">
       <EditProfile user = {user} />
-    </div>
+    </main>
   )
 }
 

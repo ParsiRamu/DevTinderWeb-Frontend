@@ -111,4 +111,10 @@
  - Loads into process.env → Dotenv reads .env and makes the variables available as process.env.MONGODB_URL, process.env.API_KEY, etc.
  - Use in your code → mongoose.connect(process.env.MONGODB_URL) — your actual secrets stay in .env instead of being hardcoded in your         JavaScript.
 
-    
+# Scheduling the cron Jobs 
+  - installing the   - npm i node-cron
+  - Learning about the crin expression Syntax  -crontab.guru
+  - Schedule a Job 
+  - date-fns
+  
+

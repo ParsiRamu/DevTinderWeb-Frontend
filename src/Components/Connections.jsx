@@ -29,19 +29,22 @@ const Connections = () => {
     if(!connections) return null;
 
     if(connections.length === 0) return (
-      <main className="mx-auto max-w-5xl px-4 py-12">
+      <div className="network-page px-4 py-12">
+      <main className="mx-auto max-w-5xl">
         <header className="mb-8 text-center">
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary">Your network</p>
           <h1 className="mt-2 text-3xl font-bold">Connections</h1>
         </header>
-        <div className="rounded-3xl border border-base-300 bg-base-200 px-6 py-14 text-center shadow-sm">
+        <div className="network-card rounded-3xl px-6 py-14 text-center">
           <p className="text-xl font-semibold">Your network starts here</p>
           <p className="mt-2 text-base-content/65">When you connect with developers, they’ll show up here.</p>
         </div>
       </main>
+      </div>
     )
   return (
-    <main className="mx-auto max-w-5xl px-4 py-10 sm:px-6">
+    <div className="network-page px-4 py-10 sm:px-6">
+    <main className="mx-auto max-w-5xl">
       <header className="mb-8 text-center">
         <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary">Your network</p>
         <h1 className="mt-2 text-3xl font-bold">Connections</h1>
@@ -51,7 +54,7 @@ const Connections = () => {
       {connections.map((connection)=>{
         const {_id,firstName,lastName,age,gender,about,photoUrl} = connection;
         return (
-            <article key={_id} className="flex flex-col items-center gap-5 rounded-3xl border border-base-300 bg-base-200 p-5 text-center shadow-sm transition-shadow hover:shadow-md sm:flex-row sm:items-start sm:p-6 sm:text-left">
+            <article key={_id} className="network-card flex flex-col items-center gap-5 rounded-3xl p-5 text-center sm:flex-row sm:items-start sm:p-6 sm:text-left">
                 <div className="shrink-0 rounded-full bg-gradient-to-br from-primary to-secondary p-1 shadow-md">
                   <img
                     src={photoUrl}
@@ -69,6 +72,7 @@ const Connections = () => {
       })}
       </section>
     </main>
+    </div>
   )
 }
 
