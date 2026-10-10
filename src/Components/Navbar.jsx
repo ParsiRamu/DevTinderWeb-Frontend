@@ -57,6 +57,7 @@ const Navbar = () => {
         <NavLink to="/profile" className={navLinkClass}>Profile</NavLink>
         <NavLink to="/connections" className={navLinkClass}>Connections</NavLink>
         <NavLink to="/requests" className={navLinkClass}>Requests</NavLink>
+        <NavLink to="/premium" className={navLinkClass}>Premium</NavLink>
         <button type="button" className="btn btn-sm btn-ghost shrink-0 rounded-full px-3 normal-case text-error hover:bg-error/10" onClick={handleLogout}>
           Logout
         </button>

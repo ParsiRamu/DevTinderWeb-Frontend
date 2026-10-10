@@ -46,6 +46,8 @@
 - Signup page 
 - End to End Testing
 
+- Built the Payment integration /premium Page
+
 
 
 
@@ -117,4 +119,16 @@
   - Schedule a Job 
   - date-fns
   
+# Razor pay Gateway integration
+  - Sign UP the Razorpay and complete the KYC registration
+  - Created the UI Page for the Premium
+  - Created the CreateOrder API in the Backend
+  - Added the key and secret in the env file
+  - Intilized the Razorpay in tne utils
+  - Creating Order on the Razorpay
+  - Creating Schema and MOdel
+  - saved the order in the Payment Collection
+  - make the API dynamic
+  - setup Rzorpay webhook
+  - 
 

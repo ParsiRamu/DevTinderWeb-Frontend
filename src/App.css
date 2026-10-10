@@ -40,6 +40,101 @@
   transform: perspective(1200px) translateY(-5px) rotateX(1deg);
 }
 
+.premium-page {
+  padding-bottom: 4rem;
+}
+
+.premium-header h1 {
+  color: #f8fafc;
+}
+
+.premium-plans {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.premium-plan {
+  min-height: 100%;
+  border-color: rgb(255 255 255 / 48%);
+  transform: none;
+}
+
+.premium-plan:hover {
+  transform: translateY(-5px);
+}
+
+.premium-plan-featured {
+  border-color: rgb(251 191 36 / 76%);
+  box-shadow:
+    0 20px 42px rgb(0 0 0 / 28%),
+    0 0 0 1px rgb(251 191 36 / 18%),
+    inset 0 1px 0 rgb(255 255 255 / 88%);
+}
+
+.premium-plan-badge {
+  border: 0;
+  color: #fff;
+}
+
+.premium-plan-mark {
+  display: grid;
+  width: 3.25rem;
+  height: 3.25rem;
+  flex: 0 0 auto;
+  place-items: center;
+  border: 1px solid rgb(8 145 178 / 24%);
+  border-radius: 1rem;
+  background: linear-gradient(145deg, rgb(207 250 254 / 95%), rgb(165 243 252 / 80%));
+  color: #0e7490;
+  font-size: 1.5rem;
+  font-weight: 800;
+  box-shadow: 0 8px 18px rgb(8 145 178 / 14%);
+}
+
+.premium-plan-mark-gold {
+  border-color: rgb(217 119 6 / 25%);
+  background: linear-gradient(145deg, rgb(254 243 199 / 98%), rgb(253 230 138 / 90%));
+  color: #b45309;
+  box-shadow: 0 8px 18px rgb(217 119 6 / 16%);
+}
+
+.premium-benefits {
+  color: #243653;
+}
+
+.premium-benefit-check {
+  display: grid;
+  width: 1.4rem;
+  height: 1.4rem;
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: 9999px;
+  background: rgb(8 145 178 / 12%);
+  color: #0e7490;
+  font-size: 0.875rem;
+  font-weight: 800;
+}
+
+.premium-benefit-check-gold {
+  background: rgb(217 119 6 / 12%);
+  color: #b45309;
+}
+
+.premium-plan-footer {
+  margin-top: auto;
+  padding-top: 1.5rem;
+}
+
+.premium-feedback {
+  color: #10213f;
+}
+
+.premium-plan button:focus-visible {
+  outline: 3px solid #0e7490;
+  outline-offset: 3px;
+}
+
 .feed-user-card {
   position: relative;
   overflow: hidden;
@@ -85,5 +180,20 @@
       linear-gradient(rgb(2 8 23 / 72%), rgb(2 8 23 / 82%)),
       url("/login-background.png");
     background-attachment: scroll;
+  }
+
+  .premium-plans {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .network-card {
+    transition: none;
+  }
+
+  .network-card:hover {
+    transform: none;
   }
 }
