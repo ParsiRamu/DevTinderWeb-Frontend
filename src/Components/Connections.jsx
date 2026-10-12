@@ -4,6 +4,7 @@ import axios from 'axios'
 import { BASE_URL } from '../utils/constants'
 import { addConnection } from '../utils/connectionSlice';
 import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 const Connections = () => {
     const connections = useSelector((store)=>store.connection)
@@ -66,6 +67,7 @@ const Connections = () => {
                     <h2 className="break-words text-xl font-bold sm:text-2xl">{firstName} {lastName}</h2>
                     {age && gender && <p className="mt-1 text-sm font-medium text-base-content/60">{age} · {gender}</p>}
                     <p className="mt-3 break-words leading-relaxed text-base-content/80">{about || "No introduction added yet."}</p>
+                    <Link to={"/chat/"+_id}><button className="btn btn-info">Chat</button></Link>
                 </div>
             </article>
         )

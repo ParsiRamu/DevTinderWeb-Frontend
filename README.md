@@ -130,5 +130,12 @@
   - saved the order in the Payment Collection
   - make the API dynamic
   - setup Rzorpay webhook
-  - 
+  
+
+# Realtime Chat Using the WebSocket
+  - Build the Chatwindow in the /chat/:targetUserid
+  - npm install socket.io
+  - create Frontend Socket configuration
+  - create Backend Socket configuration
+  
 
