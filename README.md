@@ -137,5 +137,10 @@
   - npm install socket.io
   - create Frontend Socket configuration
   - create Backend Socket configuration
+  - setUp frontend socket.io-client
+  - initialize the chat
+  - create Socket Connection
+  - Listen To events 
+  - Enhance the UI
   
 
