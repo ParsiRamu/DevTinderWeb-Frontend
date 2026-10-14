@@ -142,5 +142,10 @@
   - create Socket Connection
   - Listen To events 
   - Enhance the UI
+
+
+  # Project Ideas 
+    - Build the Chess Game
+    - Build The tik 
   
 
