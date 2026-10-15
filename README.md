@@ -147,5 +147,9 @@
   # Project Ideas 
     - Build the Chess Game
     - Build The tik 
+
+# Testing
+  - Test the Application 
+  - login/signUp through Multiple accounts and Obseve the Working Pattern of APIS from frontend to Backend
   
 
