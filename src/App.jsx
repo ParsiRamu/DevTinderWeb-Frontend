@@ -13,6 +13,7 @@ import Connections from './Components/Connections'
 import Requests from './Components/Requests'
 import Premium from './Components/Premium'
 import Chat from './Components/Chat'
+import Aboutus from './Components/Aboutus'
 
 function App() {
   
@@ -32,6 +33,7 @@ function App() {
       <Route path="/premium" element={<Premium/>}/>
       <Route path="/signup" element={<Signup/>}/>
       <Route path="/chat/:targetUserid" element={<Chat/>}/>
+      <Route path="/aboutUs" element={<Aboutus/>}/>
       
       </Route>
     </Routes>
