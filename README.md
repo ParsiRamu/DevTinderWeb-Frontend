@@ -151,5 +151,8 @@
 # Testing
   - Test the Application 
   - login/signUp through Multiple accounts and Obseve the Working Pattern of APIS from frontend to Backend
+
+# Workflow in Readme.md
+ - Added the workflow in the markdown format 
   
 
